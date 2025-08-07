@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
-import { CLIENT_STATIC_FILES_RUNTIME_POLYFILLS_SYMBOL } from "next/dist/shared/lib/constants";
 import axios from "axios";
 
 const AddProduct = () => {
@@ -34,7 +33,7 @@ const AddProduct = () => {
 
     try {
 
-      const token = await getToken()
+      const token = await getToken();
 
       const { data } = await axios.post('/api/product/add', formData, {headers: { Authorization: `Bearer ${token}`}})
 
