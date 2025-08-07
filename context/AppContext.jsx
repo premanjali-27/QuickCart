@@ -1,4 +1,6 @@
 'use client'
+import { productsDummyData, userDummyData } from "@/assests/assests";
+import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useAuth, useUser } from "@clerk/nextjs";
